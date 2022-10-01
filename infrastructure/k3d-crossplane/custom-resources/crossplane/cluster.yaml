@@ -2,7 +2,7 @@
 apiVersion: container.gcp.crossplane.io/v1beta2
 kind: Cluster
 metadata:
-  name: kcd2023
+  name: kcdfrance
 spec:
   forProvider:
     description: "Kubernetes cluster for KCD France 2023"
@@ -43,7 +43,7 @@ spec:
       maxNodeCount: 3
       minNodeCount: 1
     clusterRef:
-      name: kcd2023
+      name: kcdfrance
     config:
       machineType: n2-standard-2
       diskSizeGb: 120
