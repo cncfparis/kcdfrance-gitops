@@ -1,0 +1,7 @@
+apiVersion: compute.gcp.crossplane.io/v1beta1
+kind: GlobalAddress
+metadata:
+  name: kcdfrance-alfio
+spec:
+  forProvider:
+    addressType: EXTERNAL

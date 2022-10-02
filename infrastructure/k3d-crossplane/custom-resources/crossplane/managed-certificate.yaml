@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: kcdfrance-alfio
+  namespace: alfio
+spec:
+  domains:
+    - tickets.smana.me

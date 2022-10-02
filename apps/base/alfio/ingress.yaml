@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: kcdfrance-alfio
+    networking.gke.io/managed-certificates: kcdfrance-alfio
+    kubernetes.io/ingress.allow-http: "false"
+  labels:
+    app: alfio
+  name: alfio
+  namespace: alfio
+spec:
+  rules:
+    - host: tickets.smana.me
+      http:
+        paths:
+          - backend:
+              service:
+                name: alfio
+                port:
+                  number: 8080
+            path: /*
+            pathType: ImplementationSpecific
