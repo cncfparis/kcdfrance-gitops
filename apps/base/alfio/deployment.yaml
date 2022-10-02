@@ -5,15 +5,12 @@ metadata:
 spec:
   replicas: 1
   selector:
-    app: alfio
-    deploymentconfig: alfio
-  strategy:
-    type: Rolling
+    matchLabels:
+      app: alfio
   template:
     metadata:
       labels:
         app: alfio
-        deploymentconfig: alfio
     spec:
       containers:
         - env:
