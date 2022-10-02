@@ -72,4 +72,3 @@ spec:
       maxPodsPerNode: 60
     locations:
       - "europe-west9-a"
-      - "europe-west9-b"

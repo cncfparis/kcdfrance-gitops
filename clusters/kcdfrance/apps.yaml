@@ -12,7 +12,8 @@ spec:
     kind: GitRepository
     name: flux-system
   healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: alfio
-      namespace: alfio
+    []
+    # - apiVersion: apps/v1
+    #   kind: Deployment
+    #   name: alfio
+    #   namespace: alfio

@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
   - cluster.yaml
   - global-address.yaml
-  - managed-certificate.yaml
   - network.yaml

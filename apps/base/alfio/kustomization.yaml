@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: alfio
 
 resources:
+  - database.yaml
   - deployment.yaml
   - ingress.yaml
   - namespace.yaml

@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.global-static-ip-name: kcdfrance-alfio
+    service.alpha.kubernetes.io/app-protocols: HTTPS
     networking.gke.io/managed-certificates: kcdfrance-alfio
     kubernetes.io/ingress.allow-http: "false"
   labels:
@@ -11,13 +12,13 @@ metadata:
   namespace: alfio
 spec:
   rules:
-    - host: tickets.smana.me
+    - host: tickets.smana.dev
       http:
         paths:
           - backend:
               service:
                 name: alfio
                 port:
-                  number: 8080
+                  name: web
             path: /*
             pathType: ImplementationSpecific

@@ -5,4 +5,4 @@ metadata:
   namespace: alfio
 spec:
   domains:
-    - tickets.smana.me
+    - tickets.smana.dev
