@@ -4,3 +4,6 @@ namespace: cnpg-system
 
 bases:
   - ../../base/cnpg
+
+patchesStrategicMerge:
+  - release.yaml

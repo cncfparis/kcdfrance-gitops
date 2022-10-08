@@ -2,6 +2,8 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
   name: alfio
+  annotations:
+    iam.gke.io/gcp-service-account: cloud-native-pg@cloud-native-computing-paris.iam.gserviceaccount.com
 spec:
   description: "PostgreSQL cluster for the application Alf.io"
   imageName: ghcr.io/cloudnative-pg/postgresql:14.5

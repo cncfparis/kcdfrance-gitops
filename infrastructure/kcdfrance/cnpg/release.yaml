@@ -1,0 +1,9 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cnpg
+spec:
+  values:
+    # Only needed on serviceaccount but that should make it
+    commonAnnotations:
+      iam.gke.io/gcp-service-account: cloud-native-pg@cloud-native-computing-paris.iam.gserviceaccount.com
