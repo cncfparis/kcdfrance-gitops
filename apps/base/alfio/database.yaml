@@ -5,6 +5,7 @@ metadata:
 spec:
   description: "PostgreSQL cluster for the application Alf.io"
   imageName: ghcr.io/cloudnative-pg/postgresql:14.5
+  instances: 1
 
   bootstrap:
     initdb:
@@ -22,14 +23,14 @@ spec:
 
   backup:
     barmanObjectStore:
-      destinationPath: "gs://alfio-backups"
+      destinationPath: "gs://kcdfrance-alfio-backups"
       googleCredentials:
         gkeEnvironment: true
     retentionPolicy: "30d"
 
   resources:
     requests:
-      memory: "512Mi"
+      memory: "1Gi"
       cpu: "1"
     limits:
-      memory: "1Gi"
+      memory: "2Gi"

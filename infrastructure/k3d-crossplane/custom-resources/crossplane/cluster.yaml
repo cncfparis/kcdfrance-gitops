@@ -24,6 +24,8 @@ spec:
       maxPodsPerNode: 110
     networkPolicy:
       enabled: false
+    workloadIdentityConfig:
+      workloadPool: "cloud-native-computing-paris.svc.id.goog"
     networkConfig:
       datapathProvider: "ADVANCED_DATAPATH"
   writeConnectionSecretToRef:

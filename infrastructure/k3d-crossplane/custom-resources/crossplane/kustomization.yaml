@@ -5,3 +5,4 @@ resources:
   - cluster.yaml
   - global-address.yaml
   - network.yaml
+  - storage.yaml
