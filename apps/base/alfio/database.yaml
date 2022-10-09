@@ -2,12 +2,14 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
   name: alfio
-  annotations:
-    iam.gke.io/gcp-service-account: cloud-native-pg@cloud-native-computing-paris.iam.gserviceaccount.com
 spec:
   description: "PostgreSQL cluster for the application Alf.io"
   imageName: ghcr.io/cloudnative-pg/postgresql:14.5
   instances: 1
+
+  inheritedMetadata:
+    annotations:
+      iam.gke.io/gcp-service-account: cloud-native-pg@cloud-native-computing-paris.iam.gserviceaccount.com
 
   bootstrap:
     initdb:
@@ -25,7 +27,7 @@ spec:
 
   backup:
     barmanObjectStore:
-      destinationPath: "gs://kcdfrance-alfio-backups"
+      destinationPath: "gs://kcdfrance-cnpg-backups"
       googleCredentials:
         gkeEnvironment: true
     retentionPolicy: "30d"
