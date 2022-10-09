@@ -42,7 +42,7 @@ spec:
     autoscaling:
       autoprovisioned: false
       enabled: true
-      maxNodeCount: 3
+      maxNodeCount: 4
       minNodeCount: 1
     clusterRef:
       name: kcdfrance
