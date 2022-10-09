@@ -5,3 +5,13 @@ namespace: observability
 resources:
   - release.yaml
   - source.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+configMapGenerator:
+  - name: cnpg-dashboard
+    files:
+      - ./dashboards/cnpg.json
+    options:
+      labels:
+        grafana_dashboard: "1"

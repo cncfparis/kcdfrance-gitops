@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: cnpg-alfio
+  namespace: observability
+  labels:
+    prometheus-instance: main
+spec:
+  selector:
+    matchLabels:
+      postgresql: alfio
+  namespaceSelector:
+    matchNames:
+      - alfio
+  podMetricsEndpoints:
+    - port: metrics
