@@ -12,7 +12,7 @@ metadata:
   namespace: alfio
 spec:
   rules:
-    - host: tickets.smana.dev
+    - host: billeterie.kcdfrance.fr
       http:
         paths:
           - backend:
