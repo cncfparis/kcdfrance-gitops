@@ -9,4 +9,5 @@ resources:
   - namespace.yaml
   - podmonitor.yaml
   - prometheusrule.yaml
+  - scheduledbackup.yaml
   - service.yaml
