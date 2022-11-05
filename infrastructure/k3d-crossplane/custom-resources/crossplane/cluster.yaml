@@ -42,7 +42,7 @@ spec:
     autoscaling:
       autoprovisioned: false
       enabled: true
-      maxNodeCount: 4
+      maxNodeCount: 5
       minNodeCount: 1
     clusterRef:
       name: kcdfrance
@@ -51,7 +51,8 @@ spec:
       diskSizeGb: 120
       diskType: pd-standard
       imageType: cos_containerd
-      preemptible: true
+      # Do not use preemptible as we're close to open
+      # preemptible: true
       labels:
         environment: prod
         managed-by: crossplane
