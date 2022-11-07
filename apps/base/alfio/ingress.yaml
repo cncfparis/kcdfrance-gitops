@@ -22,3 +22,13 @@ spec:
                   name: web
             path: /*
             pathType: ImplementationSpecific
+    - host: billetterie.kcdfrance.fr
+      http:
+        paths:
+          - backend:
+              service:
+                name: alfio
+                port:
+                  name: web
+            path: /*
+            pathType: ImplementationSpecific
